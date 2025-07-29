@@ -1,0 +1,97 @@
+/* --- The Clarity - Professional & SEO-Optimized CSS (Updated) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@700;800&display=swap');
+
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #2d3748;
+    --heading-color: #1a202c;
+    --accent-color: #4299e1;
+    --meta-color: #718096;
+    --border-color: #e2e8f0;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.7;
+    font-size: 17px;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Header & Navigation --- */
+.site-header { padding: 20px 0; border-bottom: 1px solid var(--border-color); background-color: white; position: sticky; top: 0; z-index: 1000; }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.site-title a { font-family: var(--font-heading); font-size: 24px; color: var(--heading-color); text-decoration: none; font-weight: 800; }
+
+.site-nav { display: flex; } /* For Desktop */
+.site-nav a { color: var(--text-color); text-decoration: none; font-weight: 500; margin-left: 30px; transition: color 0.2s; }
+.site-nav a:hover { color: var(--accent-color); }
+
+/* --- Mobile Menu Styles (Hamburger) --- */
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0; }
+.hamburger { display: block; width: 25px; height: 3px; background-color: var(--heading-color); margin: 5px 0; transition: all 0.3s; }
+
+/* --- Homepage Sections --- */
+.hero-section { text-align: center; padding: 80px 20px; }
+.hero-title { font-family: var(--font-heading); font-size: 48px; color: var(--heading-color); margin: 0 0 15px 0; line-height: 1.2; }
+.hero-subtitle { font-size: 20px; color: var(--meta-color); max-width: 600px; margin: 0 auto 30px auto; }
+.hero-button { background-color: var(--accent-color); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background-color 0.2s; }
+.hero-button:hover { background-color: #2b6cb0; }
+.section { padding: 80px 0; }
+.section-title { font-family: var(--font-heading); font-size: 36px; text-align: center; margin-bottom: 50px; color: var(--heading-color); }
+
+/* --- Grid & Post Card (UPDATED FOR CONSISTENT DESIGN) --- */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.post-card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex; /* Using Flexbox */
+    flex-direction: column; /* Arrange content vertically */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.post-card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; } /* flex-grow makes it take available space */
+.post-card-meta { font-size: 12px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.post-card-title { font-family: var(--font-heading); font-size: 22px; margin: 0 0 15px 0; line-height: 1.3; }
+.post-card-title a { color: var(--heading-color); text-decoration: none; }
+.post-card-excerpt { font-size: 16px; color: var(--meta-color); flex-grow: 1; } /* flex-grow pushes the link to bottom */
+.read-more-link {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-top: 20px; /* Space above the link */
+    display: inline-block;
+}
+
+/* --- General Page & Post Layout --- */
+.page-header { text-align: center; padding: 60px 20px; background-color: #f9fafb; border-bottom: 1px solid var(--border-color); margin-bottom: 50px; }
+.page-title { font-family: var(--font-heading); font-size: 42px; margin: 0; }
+.page-content { max-width: 750px; margin: 0 auto; }
+.page-content h2, .page-content h3 { font-family: var(--font-heading); color: var(--heading-color); margin-top: 40px; }
+.page-content p, .page-content ul li { font-size: 18px; }
+.page-content ul { padding-left: 25px; }
+
+/* --- Footer --- */
+.site-footer { background-color: #f9fafb; border-top: 1px solid var(--border-color); padding: 50px 0; }
+.footer-content { text-align: center; }
+.footer-nav { margin-bottom: 30px; }
+.footer-nav a { color: var(--meta-color); text-decoration: none; margin: 0 15px; }
+.footer-nav a:hover { color: var(--accent-color); }
+.footer-bottom p { margin: 0; font-size: 15px; color: var(--meta-color); }
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .site-nav { display: none; position: absolute; top: 73px; left: 0; right: 0; background-color: white; flex-direction: column; text-align: center; border-bottom: 1px solid var(--border-color); }
+    .site-nav.active { display: flex; }
+    .site-nav a { margin: 0; padding: 15px 0; border-top: 1px solid var(--border-color); }
+    .menu-toggle { display: block; } /* Show hamburger */
+    .grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,6 @@
+# Allow all friendly robots to crawl the entire site
+User-agent: *
+Disallow:
+
+# Provide the location of the sitemap
+Sitemap: https://usacarinsuranceguide.netlify.app/sitemap.xml
