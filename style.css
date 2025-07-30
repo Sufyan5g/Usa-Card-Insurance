@@ -1,90 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Guides | USA Car Insurance Guide</title>
-    <meta name="description" content="Browse all our guides on US car insurance. From understanding liability to finding the cheapest rates, we cover it all.">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- The Publisher - Professional & SEO-Optimized CSS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@700&display=swap');
 
-<header class="site-header">
-    <div class="container header-content">
-        <p class="site-title"><a href="index.html">USA Car Insurance Guide</a></p>
-        <nav class="site-nav" id="main-nav">
-            <a href="index.html">Home</a>
-            <a href="blog.html" class="active">All Guides</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-    <span class="hamburger"></span>
-    <span class="hamburger"></span>
-    <span class="hamburger"></span>
-</button>
-    </div>
-</header>
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color: #495057;
+    --heading-color: #212529;
+    --accent-color: #047857; /* Rich Green */
+    --meta-color: #6c757d;
+    --border-color: #dee2e6;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Inter', sans-serif;
+}
 
-<main>
-    <header class="page-header">
-        <h1 class="page-title">All Insurance Guides</h1>
-    </header>
-    <section class="section">
-        <div class="container">
-            <div class="grid">
-                <!-- Naye post hamesha yahan sabse upar add karein -->
-                <article class="post-card">
-                    <div class="post-card-content">
-                        <p class="post-card-meta">COVERAGE EXPLAINED</p>
-                        <h3 class="post-card-title"><a href="how-much-car-insurance.html">How Much Car Insurance Do You Really Need?</a></h3>
-                        <p class="post-card-excerpt">Confused about coverage limits? Learn exactly what you need, from state minimums to full coverage, to be fully protected.</p>
-                        <a href="how-much-car-insurance.html" class="read-more-link">Read The Full Guide →</a>
-                    </div>
-                </article>
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.7;
+    font-size: 17px;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-                <article class="post-card">
-                    <div class="post-card-content">
-                        <p class="post-card-meta">SAVING MONEY</p>
-                        <h3 class="post-card-title"><a href="cheapest-car-insurance-2025.html">5 Cheapest Car Insurance Companies for 2025</a></h3>
-                        <p class="post-card-excerpt">We analyzed top providers to find the most budget-friendly options for US drivers, comparing rates, discounts, and more.</p>
-                        <a href="cheapest-car-insurance-2025.html" class="read-more-link">Read The Analysis →</a>
-                    </div>
-                </article>
+/* --- Header & Navigation --- */
+.site-header { padding: 20px 0; border-bottom: 1px solid var(--border-color); background-color: var(--card-bg-color); position: sticky; top: 0; z-index: 1000; }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.site-title a { font-family: var(--font-heading); font-size: 24px; color: var(--heading-color); text-decoration: none; font-weight: 700; }
+.site-nav { display: flex; }
+.site-nav a { color: var(--text-color); text-decoration: none; font-weight: 500; margin-left: 30px; transition: color 0.2s; }
+.site-nav a:hover, .site-nav a.active { color: var(--accent-color); }
 
-<!-- === NAYA POST === -->
-<article class="post-card">
-    <div class="post-card-content">
-        <p class="post-card-meta">PRO TIPS</p>
-        <h3 class="post-card-title"><a href="compare-car-insurance-quotes.html">How to Compare Car Insurance Quotes Like a Pro</a></h3>
-        <p class="post-card-excerpt">Don't just look at the price. Learn the 5-step framework for comparing quotes apples-to-apples, from coverage limits to customer service.</p>
-        <a href="compare-car-insurance-quotes.html" class="read-more-link">Read The Framework →</a>
-    </div>
-</article>
-<!-- === NAYA POST === -->
-<article class="post-card">
-    <div class="post-card-content">
-        <p class="post-card-meta">CLAIMS PROCESS</p>
-        <h3 class="post-card-title"><a href="file-a-claim.html">How to File a Car Insurance Claim: A Step-by-Step Guide</a></h3>
-        <p class="post-card-excerpt">Filing a claim can be stressful. Follow our simple, step-by-step guide on what to do after an accident to ensure a smooth process.</p>
-        <a href="file-a-claim.html" class="read-more-link">Read The Guide →</a>
-    </div>
-</article>
+/* --- Mobile Menu --- */
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0; }
+.hamburger { display: block; width: 25px; height: 3px; background-color: var(--heading-color); margin: 5px 0; transition: all 0.3s; }
 
-            </div>
-        </div>
-    </section>
-</main>
-    
-<footer class="site-footer">
-    <div class="container footer-content">
-        <nav class="footer-nav">
-            <a href="about.html">About</a><a href="blog.html">All Guides</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="#">Disclaimer</a>
-        </nav>
-        <div class="footer-bottom"><p>© <span id="year"></span> USA Car Insurance Guide. All Rights Reserved.</p></div>
-    </div>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+/* --- Homepage Sections --- */
+.hero-section { text-align: center; padding: 80px 20px; }
+.hero-title { font-family: var(--font-heading); font-size: 48px; color: var(--heading-color); margin: 0 0 15px 0; line-height: 1.2; }
+.hero-subtitle { font-size: 20px; color: var(--meta-color); max-width: 600px; margin: 0 auto 30px auto; }
+.hero-button { background-color: var(--accent-color); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background-color 0.2s; }
+.hero-button:hover { background-color: #059669; }
+.section { padding: 80px 0; }
+.section-title { font-family: var(--font-heading); font-size: 36px; text-align: center; margin-bottom: 50px; color: var(--heading-color); }
+
+/* --- NEW: Grid & Post Card with Featured Image --- */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.post-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.07); }
+.post-card-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.post-card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.post-card-author-date { font-size: 14px; font-weight: 500; color: var(--meta-color); margin-bottom: 10px; }
+.post-card-title { font-family: var(--font-heading); font-size: 24px; margin: 0 0 15px 0; line-height: 1.3; color: var(--heading-color); }
+.post-card-excerpt { font-size: 16px; color: var(--text-color); flex-grow: 1; }
+.read-more-link {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* --- General Page & Post Layout --- */
+.page-header { text-align: center; padding: 60px 20px; background-color: var(--card-bg-color); border-bottom: 1px solid var(--border-color); margin-bottom: 50px; }
+.page-title { font-family: var(--font-heading); font-size: 42px; margin: 0; }
+.page-content { max-width: 750px; margin: 0 auto; }
+.page-content h2, .page-content h3 { font-family: var(--font-heading); color: var(--heading-color); margin-top: 40px; }
+.page-content p, .page-content ul li { font-size: 18px; }
+.page-content ul { padding-left: 25px; }
+.page-content img { max-width:100%; height:auto; border-radius:12px; margin: 30px 0; }
+
+/* --- Footer --- */
+.site-footer { background-color: var(--card-bg-color); border-top: 1px solid var(--border-color); padding: 50px 0; }
+.footer-content { text-align: center; }
+.footer-nav { margin-bottom: 30px; }
+.footer-nav a { color: var(--meta-color); text-decoration: none; margin: 0 15px; }
+.footer-nav a:hover { color: var(--accent-color); }
+.footer-bottom p { margin: 0; font-size: 15px; color: var(--meta-color); }
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .site-nav { display: none; position: absolute; top: 73px; left: 0; right: 0; background-color: white; flex-direction: column; text-align: center; border-bottom: 1px solid var(--border-color); }
+    .site-nav.active { display: flex; }
+    .site-nav a { margin: 0; padding: 15px 0; border-top: 1px solid var(--border-color); }
+    .menu-toggle { display: block; }
+}
